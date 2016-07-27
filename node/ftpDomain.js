@@ -1341,7 +1341,7 @@ maxerr: 50, node: true */
                                     callback: function(err) {
                                         if (!eqFTPconnections[params.connectionID].ftpDomain.queueInProcess) {
                                             eqFTPconnections[params.connectionID].ftpDomain.busy = false;
-                                            if (eqFTPconnections[params.connectionID].ftpDomain.queue.a.length > 0) {
+                                            if (eqFTPconnections[params.connectionID].ftpDomain.queue.a && eqFTPconnections[params.connectionID].ftpDomain.queue.a.length > 0) {
                                                 _commands.queue.process({
                                                     connectionID: params.connectionID,
                                                     callback: function() {}
